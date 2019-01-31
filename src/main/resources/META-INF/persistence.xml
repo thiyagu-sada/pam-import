@@ -5,6 +5,8 @@
         <jta-data-source>java:jboss/datasources/TelstraConsoleDS</jta-data-source>
         <class>au.com.telstra.team.Project</class>
         <class>au.com.telstra.team.Site</class>
+        <class>au.com.telstra.team.FinancialDetail</class>
+        <class>au.com.telstra.team.Estimate</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <property name="hibernate.max_fetch_depth" value="3"/>

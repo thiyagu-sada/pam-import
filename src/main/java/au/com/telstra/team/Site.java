@@ -26,15 +26,15 @@ public class Site implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("AreaType")
 	private java.lang.String areaType;
 
-	@org.kie.api.definition.type.Label("State")
-	private java.lang.String state;
-
 	@org.kie.api.definition.type.Label("Office")
 	private java.lang.String office;
 
+	@org.kie.api.definition.type.Label("Technology")
 	@javax.persistence.ElementCollection(fetch = javax.persistence.FetchType.EAGER)
-	@org.kie.api.definition.type.Label(value = "Technology")
 	private java.util.List<java.lang.String> technology;
+
+	@org.kie.api.definition.type.Label("State")
+	private String state;
 
 	public Site() {
 	}
@@ -79,14 +79,6 @@ public class Site implements java.io.Serializable {
 		this.areaType = areaType;
 	}
 
-	public java.lang.String getState() {
-		return this.state;
-	}
-
-	public void setState(java.lang.String state) {
-		this.state = state;
-	}
-
 	public java.lang.String getOffice() {
 		return this.office;
 	}
@@ -103,18 +95,26 @@ public class Site implements java.io.Serializable {
 		this.technology = technology;
 	}
 
+	public java.lang.String getState() {
+		return this.state;
+	}
+
+	public void setState(java.lang.String state) {
+		this.state = state;
+	}
+
 	public Site(java.lang.Long id, java.lang.String name,
 			java.lang.String latitude, java.lang.String longitude,
-			java.lang.String areaType, java.lang.String state,
-			java.lang.String office, java.util.List<java.lang.String> technology) {
+			java.lang.String areaType, java.lang.String office,
+			java.util.List<java.lang.String> technology, java.lang.String state) {
 		this.id = id;
 		this.name = name;
 		this.latitude = latitude;
 		this.longitude = longitude;
 		this.areaType = areaType;
-		this.state = state;
 		this.office = office;
 		this.technology = technology;
+		this.state = state;
 	}
 
 }

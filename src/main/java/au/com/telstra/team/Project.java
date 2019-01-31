@@ -25,6 +25,8 @@ public class Project implements java.io.Serializable {
 
 	@org.kie.api.definition.type.Label("SubType")
 	private java.lang.String subType;
+	@org.kie.api.definition.type.Label(value = "Status")
+	private java.lang.String status;
 	public Project() {
 	}
 
@@ -67,14 +69,23 @@ public class Project implements java.io.Serializable {
 	public void setSubType(java.lang.String subType) {
 		this.subType = subType;
 	}
+	public java.lang.String getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(java.lang.String status) {
+		this.status = status;
+	}
+
 	public Project(java.lang.Long id, java.lang.String name,
 			java.lang.String number, java.lang.String type,
-			java.lang.String subType) {
+			java.lang.String subType, java.lang.String status) {
 		this.id = id;
 		this.name = name;
 		this.number = number;
 		this.type = type;
 		this.subType = subType;
+		this.status = status;
 	}
 
 }
